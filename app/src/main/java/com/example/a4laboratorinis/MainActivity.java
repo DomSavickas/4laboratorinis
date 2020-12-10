@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String note = sharedPref.getString(Constants.BASE_NOTE_KEY, "NotSet");
 
-        this.listNoteItems.clear();
+        // this.listNoteItems.clear();
         this.listNoteItems.add(note);
         this.adapter.notifyDataSetChanged();
 
@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.add_note:
                 Intent i = new Intent(this, AddNoteActivity.class);
                 startActivity(i);
+                return true;
+            case R.id.delete_note:
+                Intent a=new Intent(this, DeleteNoteActivity.class);
+                startActivity(a);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
