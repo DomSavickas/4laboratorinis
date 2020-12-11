@@ -1,16 +1,16 @@
 package com.example.a4laboratorinis;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AddNoteActivity extends AppCompatActivity {
 
     EditText edNote;
+    EditText edTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,12 @@ public class AddNoteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_note);
 
         this.edNote = findViewById(R.id.edNote);
+        this.edTitle = findViewById(R.id.edTitle);
     }
 
     public void onBtnSaveAndCloseClick(View view) {
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString(Constants.BASE_NOTE_KEY, this.edNote.getText().toString());
-        editor.apply();
+        NotesModel notesModel = new NotesModel(-1, edTitle.getText().toString(), edNote.getText().toString());
+        Toast.makeText(AddNoteActivity.this, notesModel.toString(), Toast.LENGTH_SHORT).show();
         finish();
     }
 }

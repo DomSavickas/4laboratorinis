@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">4laboratorinis</string>
-    <string name="notes_text">Notes</string>
+    <string name="notes_text">Your notes</string>
     <string name="add_note">Add Note</string>
     <string name="delete_note">Delete Note</string>
     <string name="save_and_close">Save and close</string>
     <string name="note_text">Note text</string>
+    <string name="Title">Title</string>
 </resources>
