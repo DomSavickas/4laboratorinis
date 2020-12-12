@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/deleteSpinner"
+        android:id="@+id/spinnerWithListItems"
         android:layout_width="217dp"
         android:layout_height="73dp"
         app:layout_constraintBottom_toTopOf="@+id/btnDelete"
