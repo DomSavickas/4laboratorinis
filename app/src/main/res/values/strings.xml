@@ -7,4 +7,6 @@
     <string name="note_text">Note text</string>
     <string name="Title">Title</string>
     <string name="notes_delete_text">Delete note</string>
+    <string name="UpdasteSpinnerandList">Update spinner and list</string>
+    <string name="delete">Delete</string>
 </resources>

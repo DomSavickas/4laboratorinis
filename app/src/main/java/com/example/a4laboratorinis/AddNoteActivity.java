@@ -24,6 +24,12 @@ public class AddNoteActivity extends AppCompatActivity {
     public void onBtnSaveAndCloseClick(View view) {
         NotesModel notesModel = new NotesModel(-1, edTitle.getText().toString(), edNote.getText().toString());
         Toast.makeText(AddNoteActivity.this, notesModel.toString(), Toast.LENGTH_SHORT).show();
+
+
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(AddNoteActivity.this);
+
+        boolean success = dataBaseHelper.addOne(notesModel);
+
         finish();
     }
 }

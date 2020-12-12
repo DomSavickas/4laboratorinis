@@ -11,7 +11,7 @@ public class NotesModel {
         this.noteContent = noteContent;
     }
 
-    public NotesModel() {
+    public NotesModel(int id) {
     }
 
     @Override

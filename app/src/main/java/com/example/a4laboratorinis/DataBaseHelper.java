@@ -82,5 +82,4 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return db.delete(Constants.NOTE_TABLE, "id=?", new String[]{id.toString()});
     }
 
-
 }
