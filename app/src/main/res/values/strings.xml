@@ -6,4 +6,5 @@
     <string name="save_and_close">Save and close</string>
     <string name="note_text">Note text</string>
     <string name="Title">Title</string>
+    <string name="notes_delete_text">Delete note</string>
 </resources>

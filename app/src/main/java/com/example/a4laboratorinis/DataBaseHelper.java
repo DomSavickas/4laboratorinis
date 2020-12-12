@@ -77,6 +77,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         return data;
     }
+    public Integer deletedata(Integer id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(Constants.NOTE_TABLE, "id=?", new String[]{id.toString()});
+    }
 
 
 }
